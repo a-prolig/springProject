@@ -11,7 +11,7 @@ import org.task.user.UserService;
 @Configuration
 public class AppConfig {
     @Bean
-    public HikariDataSource getDataSourceConfig() throws SQLException {
+    public HikariDataSource getDataSourceConfig() {
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl( "jdbc:postgresql://localhost:5432/java" );
         config.setUsername( "postgres" );
@@ -25,7 +25,7 @@ public class AppConfig {
 
     @Bean
     public UserDao getUserDao() {
-        return new UserDao(this);
+        return new UserDao();
     }
 
     @Bean

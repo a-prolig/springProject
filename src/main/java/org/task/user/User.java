@@ -1,7 +1,6 @@
 package org.task.user;
 
 import lombok.Data;
-
 @Data
 public class User {
     public Long id;
