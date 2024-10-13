@@ -1,8 +1,8 @@
 package org.task.clientStorage;
 
 
-import org.springframework.stereotype.Service;
 import org.task.config.AppConfig;
+import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -96,6 +96,6 @@ public class ClientProductDao {
     }
     private Connection getDBConnection() throws SQLException {
         AppConfig appConfig = new AppConfig();
-        return appConfig.getDataSourceConfig().getConnection();
+        return appConfig.getDataSource().getConnection();
     }
 }
