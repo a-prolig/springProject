@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: springproject
+
+server:
+  servlet:
+    context-path: "/clientProjects"
+  port:
+    8082
+
+
+
+
