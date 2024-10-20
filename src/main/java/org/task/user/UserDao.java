@@ -73,6 +73,6 @@ public class UserDao {
     }
     private Connection getConfigConnection() throws SQLException {
         AppConfig appConfig = new AppConfig();
-        return appConfig.getDataSourceConfig().getConnection();
+        return appConfig.getDataSource().getConnection();
     }
 }
